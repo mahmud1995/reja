@@ -42,7 +42,7 @@ fs.readFile('database/user.json', "utf8", (err, data) => {
 // 1 Kirish codes
 app.use(express.static('public')); 
 app.use(express.json()); 
-app.use(express.urlencoded({extends: true}));
+app.use(express.urlencoded({extended: true}));
 
 // 2: Session ga bogliq narsalar yoziladi
 
@@ -74,3 +74,4 @@ server.listen(PORT, function() {
     console.log(`The server is runnning successfully on port:${PORT}`);
 
 });
+
