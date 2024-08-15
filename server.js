@@ -26,11 +26,21 @@ console.log("Web Server ni boshlash");
 const express = require("express");
 const app = express();
 const http = require('http');
+const fs = require('fs');
+
+let user;
+fs.readFile('database/user.json', "utf8", (err, data) => {
+  if(err) {
+    console.log("Error:", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
 
 
 
 // 1 Kirish codes
-app.use(express.static("public")); // CSS files
+app.use(express.static(public)); // CSS files
 app.use(express.json()); // json format ==> object holatiga 
 app.use(express.urlencoded({extends: true})); // html post qilingan narsalarni qabul qiladi
 
@@ -51,6 +61,10 @@ app.set("view engine", "ejs"); // ejs orqali frontend ni yasemiz backend ichida
 
 app.get("/", function(req, res) {
   res.render("harid");
+});
+// author page uchun
+app.get("/author", function(req, res) {
+  res.render("author", {user: user});
 });
 
 app.post('/create-item', function(req, res) {
