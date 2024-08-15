@@ -40,9 +40,9 @@ fs.readFile('database/user.json', "utf8", (err, data) => {
 
 
 // 1 Kirish codes
-app.use(express.static(public)); // CSS files
-app.use(express.json()); // json format ==> object holatiga 
-app.use(express.urlencoded({extends: true})); // html post qilingan narsalarni qabul qiladi
+app.use(express.static('public')); 
+app.use(express.json()); 
+app.use(express.urlencoded({extends: true}));
 
 // 2: Session ga bogliq narsalar yoziladi
 
@@ -52,18 +52,12 @@ app.set("views", "views");
 app.set("view engine", "ejs"); // ejs orqali frontend ni yasemiz backend ichida
 
 // 4
-// app.get("/hello", function(req, res){
-//     res.end('<h1 style="background:red;">Hello WOrld</h1>');
-// });
-// app.get("/gift", function(req, res){
-//     res.end('<h1>Siz sovgalar bulimidasiz</h1>');
-// });
 
 app.get("/", function(req, res) {
   res.render("harid");
 });
-// author page uchun
-app.get("/author", function(req, res) {
+
+app.get("/author", function(req, res) { // author page uchun
   res.render("author", {user: user});
 });
 
@@ -80,14 +74,3 @@ server.listen(PORT, function() {
     console.log(`The server is runnning successfully on port:${PORT}`);
 
 });
- 
-
-/*
-terminal --> install [npm i nodemon] to update automatically 
-package.json -->  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon serve.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-terminal --> [npm run dev] 
-  */
