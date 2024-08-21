@@ -1,3 +1,27 @@
+// A-TASK STARTS
+
+function count_letter(element, string) {
+    let count = 0; // a variable to store the count of occurences
+    for (let i = 0; i < string.length; i++) {
+      // condition to check if the character at the current position is equal to specific letter required!
+      if (string[i] === element) {
+        count++; // if true increment by 1
+      }
+    }
+    return count ? count : "there is no such alphabet";
+  };
+  console.log(count_letter("e", "engineer")); 
+  console.log(count_letter("t", "engineer")); 
+  console.log(count_letter("b", "bubble-bus"));
+  // charAt() = a method that returns the character at a specified index (position) in a string.
+  
+  
+  // A-TASK ENDS
+
+
+
+
+
 // // Call Back Functions ni ko'rib chiqamiz
 // console.log("Jack Ma Maslahatlari");
 
@@ -118,19 +142,22 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////  A-TASK   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let count_soz = 0;
-function topHarf(soz, harf) {
-    // let count_soz = 0;
-    for (let position = 0;position < harf.length; position++) {
-        if (harf.charAt(position) == soz) {
-            count_soz += 1;
-        }
-    }
-    return count_soz;
-}
 
-// Variant 1
-gucci = topHarf("c", "guccci");
-console.log("Gucci da c nechta?", gucci);
-//// Variant 2
-// console.log(topHarf("e","enginer"));
+
+
+// let count_soz = 0;
+// function topHarf(soz, harf) {
+//     // let count_soz = 0;
+//     for (let position = 0;position < harf.length; position++) {
+//         if (harf.charAt(position) == soz) {
+//             count_soz += 1;
+//         }
+//     }
+//     return count_soz;
+// }
+
+// // Variant 1
+// gucci = topHarf("c", "guccci");
+// console.log("Gucci da c nechta?", gucci);
+// //// Variant 2
+// // console.log(topHarf("e","enginer"));
