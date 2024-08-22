@@ -54,7 +54,7 @@ app.set("view engine", "ejs"); // ejs orqali frontend ni yasemiz backend ichida
 // 4
 
 app.get("/", function(req, res) {
-  res.render("harid");
+  res.render("reja");
 });
 
 app.get("/author", function(req, res) { // author page uchun
@@ -71,7 +71,8 @@ app.post('/create-item', function(req, res) {
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function() {
-    console.log(`The server is runnning successfully on port:${PORT}`);
-
+    console.log(
+      `The server is runnning successfully on port:${PORT}, http://localhost:${PORT}`
+    );
 });
 
