@@ -176,11 +176,11 @@
 // function qoldiqTopish(a, b, callback) {
 //     if(b===0) callback("Bo'luvchi 0 ga teng bo'lmasligi lozim", null);
 //     else {
-//         callback(null, a% b);
+//         callback(null, a % b);
 //     }
 // }
 
-// qoldiqTopish(5,2, (err, data) => {
+// qoldiqTopish(5,0, (err, data) => {
 //     if(err) {
 //         console.log(err);
 //     } else {
@@ -188,20 +188,22 @@
 //     }
 // });
 
-let promise = new Promise(function (resolve, reject) {
-    const x = "geeksforgeeks";
-    const y = "geeksforgeeks"
-    if (x === y) {
-        resolve();
-    } else {
-        reject();
-    }
-});
 
-promise.
-    then(function () {
-        console.log('Success, You are a GEEK');
-    }).
-    catch(function () {
-        console.log('Some error has occurred');
-    });
+
+// let promise = new Promise(function (resolve, reject) {
+//     const x = "geeksforgeeks";
+//     const y = "geeksforgeeks"
+//     if (x === y) {
+//         resolve();
+//     } else {
+//         reject();
+//     }
+// });
+
+// promise.
+//     then(function () {
+//         console.log('Success, You are a GEEK');
+//     }).
+//     catch(function () {
+//         console.log('Some error has occurred');
+//     });
