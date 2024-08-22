@@ -1,3 +1,25 @@
+// B-TASK STARTS
+function countDigits(string) {
+  let count = 0;
+  for (let n of string) {
+    if(n >= "0" && n <= "9"){
+      count++;
+    }
+  }
+  return count;
+}
+ 
+const natija = countDigits("fsidfi324fasdfa3ini3n");
+console.log(natija);
+
+
+
+
+
+
+
+
+
 // A-TASK STARTS
 
 // function count_letter(element, string) {
