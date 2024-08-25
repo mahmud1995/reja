@@ -3,7 +3,7 @@ function countDigits(string) {
   let count = 0;
   for (let n of string) {
     if(n >= "0" && n <= "9"){
-      count++;
+      count++; 
     }
   }
   return count;
@@ -11,13 +11,9 @@ function countDigits(string) {
  
 const natija = countDigits("fsidfi324fasdfa3ini3n");
 console.log(natija);
+// B-TASK ENDS
 
-
-
-
-
-
-
+// --------------------------------------------------------
 
 
 // A-TASK STARTS
