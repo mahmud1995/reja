@@ -1,22 +1,27 @@
-// Task B:
-//Shunday function tuzing, u 1ta string parametrga ega bolsin,
-//hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
-//MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+// Task C Starts:
 
-function count_digits(str) {
-  let count = 0;
-  for (let n of str) {
-    if (n >= "0" && n <= "9") {
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+const checkContent = (a, b) => {
+  const arr = b.split("");
+  const new_arr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    if (a.length === arr.length && a.includes(arr[i])) {
       count++;
     }
+    new_arr.push(count);
   }
-  return count;
-}
+  if (new_arr.includes(0)) {
+    return false;
+  } else {
+    return true;
+  }
+};
 
-const result = count_digits("ah98mad7al3ie1v");
+const result = checkContent("mitgroup", "groupmti");
 console.log(result);
-
-
 
 
 
