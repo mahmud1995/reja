@@ -42,8 +42,8 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     .catch((err) => console.log("Could not get data", err));
 });
 
-document.addEventListener("click", function (e) {
   // delete operations
+document.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-me")) {
     if (confirm("Are you Sure to delete")) {
       axios
