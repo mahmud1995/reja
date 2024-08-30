@@ -18,7 +18,7 @@ mongodb.connect(connectionString, {
         const app = require('./app')
         // Routing codes - serverni hosil qilish
         const server = http.createServer(app);
-        let PORT = 3000;
+        let PORT = 6001;
         server.listen(PORT, function() {
             console.log(
                 `The server is runnning successfully on port:${PORT}, http://localhost:${PORT}`

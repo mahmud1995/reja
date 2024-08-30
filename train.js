@@ -1,3 +1,48 @@
+/*E-TASK: 
+
+Shunday function tuzing, 
+u bitta string argumentni qabul 
+qilib osha stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+
+@MITASK
+*/
+
+function get_reverse(str) {
+  // empty string
+  let new_string = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    new_string += str[i];
+  }
+  return new_string;
+}
+const result = get_reverse("hello");
+console.log("result:", result);
+
+const result2 = get_reverse("koobkrow");
+console.log("result2:", result2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Task D:
 //Shunday class tuzing nomi Shop va uni constructoriga 3 hil mahsulot pass bolsin,
 // hamda classning 3 ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method
