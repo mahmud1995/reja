@@ -21,7 +21,7 @@ function itemTemplate(item) {
               Delete
             </button>
           </div>
-        </li>
+  </li>
   `;
 }
 
