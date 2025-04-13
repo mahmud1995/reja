@@ -2,9 +2,9 @@ services:
   node:
     container_name: reja
     restart: always
-    build:
-      context: . # Build from the current directory
-      dockerfile: Dockerfile # Name of your Dockerfile
+    # build:
+    #   context: . # Build from the current directory
+    #   dockerfile: Dockerfile # Name of your Dockerfile
     image: makhmudyuldoshev/reja-image # Tags the built image
     ports:
       - 3008:3000
@@ -13,7 +13,7 @@ services:
     working_dir: /usr/src/app
     networks:
       - reja_network
-    command: ["bash", "-c", "npm install && npm run dev"] # Optional if CMD is in Dockerfile
+    command: bash -c "npm install && npm run dev" # Optional if CMD is in Dockerfile
 
 networks:
   reja_network:

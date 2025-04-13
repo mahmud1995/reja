@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16.19.0
 
 COPY . /reja
 WORKDIR /reja
